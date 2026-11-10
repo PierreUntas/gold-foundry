@@ -1,0 +1,10 @@
+<!-- Empêche le build iOS de retirer des composants que le jeu crée par code
+     (GameObject.CreatePrimitive ajoute ces colliders). -->
+<linker>
+  <assembly fullname="UnityEngine.PhysicsModule">
+    <type fullname="UnityEngine.MeshCollider" preserve="all"/>
+    <type fullname="UnityEngine.CapsuleCollider" preserve="all"/>
+    <type fullname="UnityEngine.SphereCollider" preserve="all"/>
+    <type fullname="UnityEngine.BoxCollider" preserve="all"/>
+  </assembly>
+</linker>
